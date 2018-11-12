@@ -28,10 +28,11 @@ getDate.addEventListener("change", showDate);
 function setColor(){
 var aa =  value.style.backgroundColor = colour.value;
   console.log(aa);
+  alert(aa);
 }
 theForm.addEventListener("input", setColor);
 
-function rangeAction{
+/*function rangeAction{
 
 }
-Range.addEventListener("input", rangeAction);
+Range.addEventListener("input", rangeAction);*/
