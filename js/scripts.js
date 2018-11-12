@@ -5,14 +5,19 @@ const theDate = document.getElementById("date");
 const getDate = document.querySelector('input[type="date"]');
 
 var d = document.getElementById("date").innerText;
-/*store inner date in x */
+/*store h1 innertext */
 
-function showDate(){/*new date value is stored in d */
+var originaltext = document.getElementById("date").innerText;
+
+function showDate(){
+  /*new date value is stored in d */
   let d = new Date(getDate.value);
-
+  alert((d.getDate() + 1) + '/' + d.getMonth() + '/' +  d.getFullYear());
   d.toDateString(); /*make date human readable */
-  console.log(d);
+
+/* add original text and date and display them*/
+  a = (`${originaltext}` + " " + `${d}`);
+   document.getElementById("date").innerText = a;
+   console.log(a);
 }
 getDate.addEventListener("change", showDate);
-
-console.log(d);
