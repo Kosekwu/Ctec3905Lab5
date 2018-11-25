@@ -1,12 +1,9 @@
 "use-strict";
 
+//DATE
 const theForm = document.getElementById("the-form");
 const theDate = document.getElementById("date");
 const getDate = document.querySelector('input[type="date"]');
-const colour = document.getElementById("color");
-const value = document.getElementById("the-value");
-const Range = document.getElementById("range");
-
 var d = document.getElementById("date").innerText;
 /*store h1 innertext */
 
@@ -25,12 +22,22 @@ function showDate(){
 }
 getDate.addEventListener("change", showDate);
 
+
+//COLOUR
+
+const colour = document.getElementById("color");
+const value = document.getElementById("the-value");
+
 function setColor(){
 var aa =  value.style.backgroundColor = colour.value;
   console.log(aa);
   alert(aa);
 }
 theForm.addEventListener("input", setColor);
+
+//RANGE
+const Range = document.getElementById("range");
+
 
 /*function rangeAction{
 
