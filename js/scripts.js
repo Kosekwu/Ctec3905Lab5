@@ -24,7 +24,6 @@ getDate.addEventListener("change", showDate);
 
 
 //COLOUR
-
 const colour = document.getElementById("color");
 const value = document.getElementById("the-value");
 
