@@ -12,8 +12,8 @@ var originaltext = document.getElementById("date").innerText;
 function showDate(){
   /*new date value is stored in d */
   let d = new Date(getDate.value);
-  /*make date human readable d.toDateString(); */
-  //solution:
+  /*make date human readable - My solution: d.toDateString(); included greenich time stamp */
+  //solution only the date. I needed to refernce innerText
   theDate.innerText = d.toDateString();
 
 /* add original text and date and display them
@@ -29,16 +29,21 @@ const colour = document.getElementById("color");
 const value = document.getElementById("the-value");
 
 function setColor(){
-var aa =  value.style.backgroundColor = colour.value;
-  console.log(aa);
-  alert(aa);
+let aa =  value.style.backgroundColor = colour.value;
+
 }
 theForm.addEventListener("input", setColor);
 
 //RANGE
 const Range = document.getElementById("range");
 
-
+function rangeAction(){
+let r = Range.value;
+let runit = `${r}%`;
+value.style.width = runit;
+value.innerText = runit;
+}
+Range.addEventListener("input", rangeAction);
 /*function rangeAction{
 
 }
