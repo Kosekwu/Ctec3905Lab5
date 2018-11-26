@@ -12,13 +12,14 @@ var originaltext = document.getElementById("date").innerText;
 function showDate(){
   /*new date value is stored in d */
   let d = new Date(getDate.value);
-  /*alert((d.getDate()) + '/' + d.getMonth() + '/' +  d.getFullYear());*/
-  d.toDateString(); /*make date human readable */
+  /*make date human readable d.toDateString(); */
+  //solution:
+  theDate.innerText = d.toDateString();
 
-/* add original text and date and display them*/
+/* add original text and date and display them
   a = (`${originaltext}` + " " + `${d}`);
    document.getElementById("date").innerText = a;
-   console.log(a);
+   console.log(a);*/
 }
 getDate.addEventListener("change", showDate);
 
